@@ -33,8 +33,7 @@ DatePicker.Attach("enddate",{});
 日期格式化的自定义包含最终输出的字符串格式定制和空间上显示的月份的字符串定制：
 {{{
 DatePicker.Attach('elementid',{
-    formater:function(date){ return date; },
+    formater:function(date){ return 'start at: '+date; },
     labelformater:function(date){ return date.getFullYear()+'-'+(date.getMonth()+1); }
 });
 }}}
-
