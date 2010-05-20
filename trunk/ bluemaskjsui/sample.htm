@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title> Bluemask.DatePicker </title>
+<link rel='stylesheet' type='text/css' href='bluemask.datepicker.css'/> 
+<script language="javascript" src="bluemask.datepicker.js"></script>
+</head>
+
+<body>
+<h1>Bluemask.DatePicker</h1>
+<p>This is a javascript UI control for date picking usage.</p>
+
+<form>
+	<p>select start date: 
+		<input type='text' name='startdate' id='startdate' value='' /></p>
+	
+	<p>select end date: 
+		<input type='text' name='enddate' id='enddate' value='2010-5-20' /></p>
+
+	
+</form>
+
+<script language="javascript">
+DatePicker.Attach("startdate",{labelformater:function(d){return d.getFullYear()+"年"+(d.getMonth()+1)+"月";} });
+DatePicker.Attach("enddate",{});
+</script>
+
+</body>
+</html>
