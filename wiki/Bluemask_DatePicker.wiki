@@ -1,0 +1,20 @@
+#summary One-sentence summary of this page.
+
+= Bluemask.DatePicker =
+
+在做一个应用的时候本来用的是jquery.datepicker，但是无奈在IE下死活有问题，懒得烦心去改代码，干脆自己写了个完全不依赖第三方库的日期选择控件。
+
+共一个js文件(bluemask.datepicker.js)和一个css样式文件(bluemask.datepicker.css).
+*用法*很简单：
+{{{
+<p>select start date: 
+<input type='text' name='startdate' id='startdate' value='' /></p>
+	
+<p>select end date: 
+<input type='text' name='enddate' id='enddate' value='2010-5-20' /></p>
+
+<script language="javascript">
+DatePicker.Attach("startdate",{labelformater:function(d){return d.getFullYear()+"年"+(d.getMonth()+1)+"月";} });
+DatePicker.Attach("enddate",{});
+</script>
+}}}
