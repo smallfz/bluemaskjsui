@@ -1,9 +1,11 @@
+#labels Featured
 #日历/日期选择控件DatePicker
 
 = Bluemask.DatePicker =
 
 在做一个应用的时候本来用的是jquery.datepicker，但是无奈在IE下死活有问题，懒得烦心去改代码，干脆自己写了个完全不依赖第三方库的日期选择控件。
 
+== 使用 ==
 共一个js文件(bluemask.datepicker.js)和一个css样式文件(bluemask.datepicker.css).
 *用法*很简单：
 {{{
@@ -18,3 +20,22 @@ DatePicker.Attach("startdate",{labelformater:function(d){return d.getFullYear()+
 DatePicker.Attach("enddate",{});
 </script>
 }}}
+
+== 配置 ==
+
+本地化localization
+对于英文 `DatePicker.Config.WeekLabels=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];`
+关闭链接的文字 `DatePicker.Config.LabelClose="Close";`
+
+如果中文 `DatePicker.Config.WeekLabels=["日","一","二","三","四","五","六"];`
+
+除了这些全局性的自定义配置方式，还可以对每个控件实例进行分别定制，例如在对控件进行初始绑定时，调用DatePicker.Attach，第二个参数可以设置日期格式花的方法，以便输出自己想要的格式。
+日期格式化的自定义包含最终输出的字符串格式定制和空间上显示的月份的字符串定制：
+{{{DatePicker.Attach('elementid',{
+    formater:function(date){ return date; },
+    labelformater:function(date){ return date.getFullYear()+'-'+(date.getMonth()+1); }
+});
+}}}
+
+
+
