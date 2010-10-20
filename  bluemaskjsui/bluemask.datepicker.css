@@ -7,8 +7,31 @@
 	overflow:hidden;
 }
 
+.datepicker iframe
+{
+	border:1px solid red;
+	border-spacing:0px;
+	padding:0px;
+	margin:0px;
+	position:relative;
+	left:0px;
+	top:0px;
+	z-index:10;
+	width:200px;
+	height:170px;
+}
+
 .datepicker .container{
-	display:block;background:#ffffff; border:1px solid #cccccc; padding:2px;
+	display:block;
+	position:absolute;
+	left:0px;
+	top:0px;
+	background:#f3f3f3; 
+	border:1px solid #cccccc; 
+	padding:2px;
+	z-index:11;
+	width:200px;
+	height:170px;
 }
 
 /* head row */
@@ -16,6 +39,17 @@
 .datepicker .headrow{
 	display:block; clear:both; width:100%; padding:2px 0px;
 	text-align:center;
+}
+
+.datepicker .headrow .label
+{
+	cursor:pointer;
+}
+
+.datepicker .headrow .labelhover
+{
+	cursor:pointer;
+	color:#ff6600;
 }
 
 .datepicker .headhandlers{
@@ -31,7 +65,9 @@
 }
 
 .datepicker .headhandlers a{
-	padding:0px 3px; border:1px solid #cccccc;
+	padding:0px 3px; border:1px solid #white;
+	background:#006699;
+	color:White;
 	cursor:pointer;
 }
 
