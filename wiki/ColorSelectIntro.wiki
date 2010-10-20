@@ -1,0 +1,20 @@
+#summary One-sentence summary of this page.
+
+= ColorSelector =
+
+js实现的一个简单的颜色选择器，只有固定的一些色块，且包含not-web-safe色。
+
+
+== 如何使用 ==
+
+使用Attach方法将选择器绑定至一个html控件：
+{{{ ColorSelector.Attach(element|elementid, init_value_reader, value_writter); }}}
+
+例：
+{{{ ColorSelector.Attach('txtbox_color', function(){
+        return document.getElementById('txtbox_color').value;
+    }, function(color){
+        document.getElementById('txtbox_color').value = color;
+    }); }}}
+
+即可。
